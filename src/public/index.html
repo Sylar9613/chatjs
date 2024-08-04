@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Javascript FullStack</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark bg-warning">
+        <a class="navbar-brand mx-auto" href="">
+            Javascript FullStack Chat
+        </a>
+        <form id="disconnect">
+            <button type="submit" class="btn btn-warning text-white btn-block">
+                <i class="fa fa-fw fa-sign-out"></i>
+            </button>
+        </form>
+    </nav>
+    
+    <div class="container p-4">
+        <!-- NICKNAME FORM -->
+        <div id="nickWrap">
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Enter your Username:</h3>
+                        </div>
+                        <p id="nickError"></p>
+                        <div class="card-body">
+                            <form id="nickForm">
+                                <input type="text" id="nickname" class="form-control" autofocus>
+                                <button type="submit" class="btn btn-warning text-white btn-block mt-2">
+                                    <i class="fa fa-fw fa-location-arrow"></i> Send
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHAT CONTAINER -->
+        <div id="contentWrap">
+            <div class="row">
+                <div class="col-md-8 pb-4">
+                    <div class="card">
+                        <!-- CARD HEADER-->
+                        <div class="card-header bg-dark text-white">
+                            <h4>Let's Chat</h4>
+                        </div>
+                
+                        <!-- CARD BODY-->
+                        <div id="chat" class="card-body"></div>
+                
+                        <!-- CARD FOOTER -->
+                        <form id="message-form" class="card-footer">
+                            <div class="input-group">
+                                <input type="text" id="message" class="form-control">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-warning text-white">
+                                        <i class="fa fa-fw fa-location-arrow"></i> Send
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="pb-2">
+                        <div class="card">
+                            <div class="card-header bg-dark text-white">
+                                <h3>Created at</h3>
+                            </div>
+                            <div class="card-body">
+                                <input class="text-green" style="width:100%;" type="datetime" id="created" value="" disabled/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- USERS SECTION-->
+                    <div class="pt-2">
+                        <div class="card">
+                            <div class="card-header bg-dark text-white">
+                                <h3>Users</h3>
+                            </div>
+                            <div class="card-body">
+                                <div id="usernames"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

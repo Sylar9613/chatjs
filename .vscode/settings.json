@@ -1,0 +1,34 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#164a8e",
+        "activityBar.activeBorder": "#e13e85",
+        "activityBar.background": "#164a8e",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#e13e85",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "statusBar.background": "#0f3362",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#164a8e",
+        "titleBar.activeBackground": "#0f3362",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#0f336299",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#0f3362",
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "database": "sigia",
+            "username": "root",
+            "name": "db-sigia",
+            "password": ""
+        }
+    ]
+}
